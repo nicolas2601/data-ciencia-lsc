@@ -1,0 +1,21 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# API Framework
+fastapi==0.109.2
+uvicorn==0.27.1
+python-multipart==0.0.9
+
+# Machine Learning (CPU only, sin CUDA)
+tensorflow-cpu==2.15.0
+tf-keras==2.15.0
+torch==2.1.0+cpu
+transformers==4.36.2
+
+# Computer Vision (sin GUI)
+opencv-python-headless==4.9.0.80
+mediapipe==0.10.9
+
+# Utilidades
+numpy==1.26.4
+python-dotenv==1.0.0
+sentencepiece==0.1.99

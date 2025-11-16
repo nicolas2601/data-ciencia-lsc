@@ -1,0 +1,98 @@
+# ========================================
+# PROYECTO LSC INTERPRETER - GITIGNORE PRINCIPAL
+# ========================================
+
+# Dataset principal (muy grande para GitHub)
+DataSet_LSC/
+
+# Python - Virtual Environment
+venv/
+ENV/
+env/
+
+# Python - Archivos compilados
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vim/
+.emacs.d/
+*.sublime-project
+*.sublime-workspace
+
+# Logs generales
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+temp/
+tmp/
+
+# Archivos de configuración sensibles
+.env
+.env.local
+.env.production
+.env.test
+config.json
+secrets.json
+*.key
+*.pem
+credentials.json
+
+# Modelos de ML (muy pesados)
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.model
+*.weights
+models/
+checkpoints/
+
+# Node.js (para el frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Cache general
+.cache/
+*.cache

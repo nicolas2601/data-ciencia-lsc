@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+temp/
+tmp/
+
+# Dataset (muy grande para GitHub)
+DataSet_LSC/
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+
+# Archivos de configuración sensibles
+config.py
+secrets.py
+credentials.json
+*.key
+*.pem
+
+# Cache de TensorFlow/PyTorch
+.cache/
+__pycache__/
+.tensorflow/
+.torch/
+
+# Archivos de métricas y logs de entrenamiento
+tensorboard_logs/
+mlruns/
+wandb/
+*.tfevents.*

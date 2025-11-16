@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: lsc-interpreter-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Montar carpeta de modelos (modelos deben estar en ./models/)
+      - ./models:/app/models:ro
+      # Logs
+      - ./logs:/app/logs
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - MODELS_PATH=/app/models
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Opcional: limitar recursos
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+        reservations:
+          cpus: '1.0'
+          memory: 2G
+
+  # Opcional: Nginx como reverse proxy
