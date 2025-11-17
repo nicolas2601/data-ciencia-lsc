@@ -12,7 +12,7 @@
 
 1. Ve a tu panel de Coolify
 2. Crea un nuevo proyecto: **LSC Interpreter**
-3. Selecciona **Docker Compose** como tipo de aplicación
+3. Selecciona **Dockerfile** como tipo de aplicación
 4. Conecta tu repositorio: `https://github.com/nicolas2601/data-ciencia-lsc.git`
 
 ### 2. Variables de Entorno
@@ -22,7 +22,7 @@ Configura estas variables en Coolify:
 ```bash
 # API Configuration
 API_HOST=0.0.0.0
-API_PORT=8000
+API_PORT=8002
 API_WORKERS=1
 
 # TensorFlow Configuration
@@ -46,7 +46,7 @@ PYTHONDONTWRITEBYTECODE=1
 
 - **Dockerfile**: `Dockerfile` (en la raíz del proyecto)
 - **Build Context**: `.` (raíz del proyecto)
-- **Puerto**: `8000`
+- **Puerto**: `8002`
 
 ### 4. Health Check
 
@@ -64,7 +64,7 @@ La aplicación incluye un endpoint de health check en `/health` que Coolify pued
 /
 ├── Dockerfile              # Configuración del contenedor
 ├── .dockerignore           # Archivos excluidos del build
-├── coolify.yaml            # Configuración para Coolify
+├── COOLIFY_DEPLOY.md       # Documentación de despliegue
 ├── backend/
 │   ├── api.py              # API principal
 │   ├── requirements.txt    # Dependencias Python
