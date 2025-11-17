@@ -73,14 +73,12 @@ secrets.json
 *.pem
 credentials.json
 
-# Modelos de ML (muy pesados)
-*.h5
-*.hdf5
-*.pkl
-*.pickle
-*.model
-*.weights
-models/
+# Modelos de ML (ahora manejados con Git LFS)
+# *.h5 - Ahora en Git LFS
+# *.pkl - Ahora en Git LFS
+# *.model - Ahora en Git LFS
+# *.weights - Ahora en Git LFS
+# models/ - Ahora permitido con Git LFS
 checkpoints/
 
 # Node.js (para el frontend)
