@@ -1,0 +1,29 @@
+# Configuración para Coolify - LSC Interpreter API
+version: '3.8'
+
+services:
+  lsc-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TF_USE_LEGACY_KERAS=1
+      - TF_CPP_MIN_LOG_LEVEL=2
+    volumes:
+      - ./models:/app/models:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
