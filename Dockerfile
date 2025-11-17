@@ -48,7 +48,14 @@ COPY backend/ .
 
 # Crear directorios necesarios
 RUN mkdir -p models utils logs temp && \
-    chown -R appuser:appuser /app
+    mkdir -p /home/appuser/.cache/huggingface/hub && \
+    mkdir -p /tmp/matplotlib && \
+    chown -R appuser:appuser /home/appuser /tmp /app
+
+# Variables de entorno para cache
+ENV TRANSFORMERS_CACHE=/tmp/huggingface \
+    MPLCONFIGDIR=/tmp/matplotlib \
+    HF_HOME=/tmp/huggingface
 
 # Cambiar al usuario no-root
 USER appuser
